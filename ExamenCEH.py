@@ -1,6 +1,29 @@
 import random
 import os
 
+print("""
+::::'######::'########:'########::'########:'####:'########:'####:'########:'########::::::::'########:'########:'##::::'##:'####::'######:::::'###::::'##::::::::::'##::::'##::::'###:::::'######::'##:::'##:'########:'########:::::
+:::'##... ##: ##.....:: ##.... ##:... ##..::. ##:: ##.....::. ##:: ##.....:: ##.... ##::::::: ##.....::... ##..:: ##:::: ##:. ##::'##... ##:::'## ##::: ##:::::::::: ##:::: ##:::'## ##:::'##... ##: ##::'##:: ##.....:: ##.... ##::::
+::: ##:::..:: ##::::::: ##:::: ##:::: ##::::: ##:: ##:::::::: ##:: ##::::::: ##:::: ##::::::: ##:::::::::: ##:::: ##:::: ##:: ##:: ##:::..:::'##:. ##:: ##:::::::::: ##:::: ##::'##:. ##:: ##:::..:: ##:'##::: ##::::::: ##:::: ##::::
+::: ##::::::: ######::: ########::::: ##::::: ##:: ######:::: ##:: ######::: ##:::: ##::::::: ######:::::: ##:::: #########:: ##:: ##:::::::'##:::. ##: ##:::::::::: #########:'##:::. ##: ##::::::: #####:::: ######::: ########:::::
+::: ##::::::: ##...:::: ##.. ##:::::: ##::::: ##:: ##...::::: ##:: ##...:::: ##:::: ##::::::: ##...::::::: ##:::: ##.... ##:: ##:: ##::::::: #########: ##:::::::::: ##.... ##: #########: ##::::::: ##. ##::: ##...:::: ##.. ##::::::
+::: ##::: ##: ##::::::: ##::. ##::::: ##::::: ##:: ##:::::::: ##:: ##::::::: ##:::: ##::::::: ##:::::::::: ##:::: ##:::: ##:: ##:: ##::: ##: ##.... ##: ##:::::::::: ##:::: ##: ##.... ##: ##::: ##: ##:. ##:: ##::::::: ##::. ##:::::
+:::. ######:: ########: ##:::. ##:::: ##::::'####: ##:::::::'####: ########: ########:::::::: ########:::: ##:::: ##:::: ##:'####:. ######:: ##:::: ##: ########:::: ##:::: ##: ##:::: ##:. ######:: ##::. ##: ########: ##:::. ##::::
+::::......:::........::..:::::..:::::..:::::....::..::::::::....::........::........:::::::::........:::::..:::::..:::::..::....:::......:::..:::::..::........:::::..:::::..::..:::::..:::......:::..::::..::........::..:::::..:::::
+'########::'######::::::::::::'######:::'#######::'##::::'##:'##::: ##::'######::'####:'##:::::::::::::::::'######::'##:'########:'##::::'##::::'########:'########::'######::'########::::'########:'##::::'##::::'###::::'##::::'##:
+ ##.....::'##... ##::::::::::'##... ##:'##.... ##: ##:::: ##: ###:: ##:'##... ##:. ##:: ##::::::::::::::::'##... ##: ##: ##.....:: ##:::: ##::::... ##..:: ##.....::'##... ##:... ##..::::: ##.....::. ##::'##::::'## ##::: ###::'###:
+ ##::::::: ##:::..::::::::::: ##:::..:: ##:::: ##: ##:::: ##: ####: ##: ##:::..::: ##:: ##:::::::::::::::: ##:::..:: ##: ##::::::: ##:::: ##::::::: ##:::: ##::::::: ##:::..::::: ##::::::: ##::::::::. ##'##::::'##:. ##:: ####'####:
+ ######::: ##:::::::'#######: ##::::::: ##:::: ##: ##:::: ##: ## ## ##: ##:::::::: ##:: ##:::::::::::::::: ##:::::::.##: ######::: #########::::::: ##:::: ######:::. ######::::: ##::::::: ######:::::. ###::::'##:::. ##: ## ### ##:
+ ##...:::: ##:::::::........: ##::::::: ##:::: ##: ##:::: ##: ##. ####: ##:::::::: ##:: ##:::::::::::::::: ##:::::::'##: ##...:::: ##.... ##::::::: ##:::: ##...:::::..... ##:::: ##::::::: ##...:::::: ## ##::: #########: ##. #: ##:
+ ##::::::: ##::: ##:::::::::: ##::: ##: ##:::: ##: ##:::: ##: ##:. ###: ##::: ##:: ##:: ##:::::::::::::::: ##::: ##: ##: ##::::::: ##:::: ##::::::: ##:::: ##:::::::'##::: ##:::: ##::::::: ##:::::::: ##:. ##:: ##.... ##: ##:.:: ##:
+ ########:. ######:::::::::::. ######::. #######::. #######:: ##::. ##:. ######::'####: ########::::::::::. ######:: ##: ########: ##:::: ##::::::: ##:::: ########:. ######::::: ##::::::: ########: ##:::. ##: ##:::: ##: ##:::: ##:
+........:::......:::::::::::::......::::.......::::.......:::..::::..:::......:::....::........::::::::::::......:::..::........::..:::::..::::::::..:::::........:::......::::::..::::::::........::..:::::..::..:::::..::..:::::..::                                                                                                                                                                                                
+                                                                                                                                                                                                                                      
+                                                                                          C|EH Test Exam - The Matrix flavoured
+                                                                                        With +100 random questions from previous
+                                                                                               exams gathered by OSINT.
+
+""")
 # --- Cuestionario (puedes ampliarlo/modificarlo) ---
 cuestionario = [
     {
@@ -974,67 +997,61 @@ cuestionario = [
 
 # --- Frases de felicitación (The Matrix) ---
 frases_aprobado = [
-    "¡Has despertado de la Matrix del desconocimiento!",
-    "Eres el Elegido/a. ¡Has dominado el conocimiento!",
-    "Has tomado la pastilla roja del saber. ¡Felicidades!",
-    "La Matrix no tiene poder sobre ti. ¡Has aprobado!",
-    "Has visto más allá de la ilusión. ¡Excelente trabajo!",
-    "Tu mente es libre. ¡Has superado el examen!",
-    "Has seguido al conejo blanco hasta la victoria.",
-    "Has esquivado las balas de la ignorancia.",
-    "Conoces el camino, ahora lo has recorrido. ¡Enhorabuena!",
-    "Has demostrado que no hay cuchara. ¡La realidad es tuya!"
+    "You have awakened from the Matrix!",
+    "You are the One. You have mastered knowledge!",
+    "You know now cyber Kung-Fu, sort of.",
+    "The Matrix has no control over you",
+    "Your mind is free.",
+    "You have followed the white rabbit.",
+    "You have dodged the bullets of ignorance.",
+    "You know the path, now you have walked it.",
+    "You have proof that there is no spoon."
 ]
 
 # --- Frases de ánimo (The Matrix) ---
 frases_suspenso = [
-    "La Matrix aún te tiene atrapado. ¡No te rindas!",
-    "Aún estás conectado. ¡Despierta en la próxima!",
-    "La pastilla azul te mantiene dormido. ¡Inténtalo de nuevo!",
-    "Los agentes del error te han alcanzado, pero puedes volver a intentarlo.",
-    "No te preocupes, Neo también cayó la primera vez. ¡Sigue entrenando!",
-    "Aún hay esperanza.  Libera tu mente en el próximo intento.",
-    "No todos los caminos llevan a Sion a la primera. ¡Persevera!",
-    "Recuerda, no hay cuchara... pero sí hay otra oportunidad.",
-    "El fracaso es solo una ilusión. ¡Levántate y vuelve a intentarlo!",
-    "Todavía estás a tiempo de elegir la pastilla roja."
+    "The Matrix still has you.",
+    "You're still connected.",
+    "Don't worry, Neo also fell the first time.",
+    "Remember, there is no spoon...",
+    "Failure is only an illusion.",
 ]
 
 # --- Frases de saludo/bienvenida (The Matrix) ---
 frases_bienvenida = [
-    "Bienvenido a la madriguera del conejo. ¿Estás listo para ver cuán profundo llega?",
-    "Despierta...  Es hora de poner a prueba tu conocimiento sobre la Matrix.",
-    "La Matrix te tiene... o eso cree. Demuestra que puedes liberarte con este test.",
-    "Sigue al conejo blanco... y responde a las preguntas.",
-    "¿Pastilla azul o pastilla roja? Hoy, la elección es responder correctamente.",
-    "No intentes doblar la cuchara, eso es imposible. Intenta darte cuenta de la verdad... ¿Conoces la Matrix?",
+    "Welcome to the rabbit hole. Are you ready to see how deep it goes?",
+    "Wake up Neo...",
+    "The Matrix has you... or so it thinks. Prove you can break free.",
+    "Follow the white rabbit...",
+    "Blue pill or red pill? Today, the choice is to answer correctly.",
+    "Don't try to bend the spoon, that's impossible. Try to realize the truth... Do you know the Matrix?",
 ]
 
 # --- Frases de despedida (The Matrix) ---
 frases_despedida = [
-    "La Matrix te espera... para tu próximo intento.",
-    "Desconéctate... por ahora.  Pero recuerda, la verdad está ahí fuera.",
-    "Hasta pronto. Recuerda, todo lo que te ofrezco es la verdad, nada más.",
-    "Es hora de volver a la Matrix... o quizás no. ¡Tú decides!",
-    "El futuro no está escrito. Vuelve cuando estés listo para reescribirlo."
+    "The Matrix awaits... for your next attempt.",
+    "Disconnect... for now. But remember, the truth is out there.",
+    "See you soon. Remember, all I'm offering is the truth, nothing more.",
+    "It's time to go back to the Matrix... or maybe not. You decide!",
+    "The future is not written. Come back when you're ready to rewrite it."
 ]
 
 # --- Frases para empezar el test (The Matrix) ---
 frases_empezar = [
-    "¿Estás listo para ver si eres El Elegido/a?",
-    "¿Te atreves a tomar la pastilla roja del conocimiento?",
-    "Es hora de liberarte... o no. ¿Empezamos?",
-    "¿Listo para desafiar a la Matrix?",
-    "La puerta a la verdad está abierta. ¿Entras?"
+    "Are you ready to see if you are The One?",
+    "Dare you take the red pill of knowledge?",
+    "It's time to break free... or not. Shall we begin?",
+    "Ready to challenge the Matrix?",
+    "The door to the truth is open. Do you enter?"
 ]
 
 # --- Frases para continuar (The Matrix)
 frases_continuar = [
-    "Sigue el camino, Neo...",
-    "La Matrix te observa...",
-    "No pienses que *eres*, ten la *certeza* de que *eres*...",
-    "Libera tu mente...",
-    "Aún estás a tiempo de desconectar...",
+    "Follow the path, Neo...",
+    "The Matrix watches you...",
+    "Dont think you are, be sure you are...",
+    "Free... your... mind...",
+    "Still have time to...",
 ]
 
 
@@ -1042,22 +1059,22 @@ def presentacion():
     print("*" * 40)
     print(random.choice(frases_bienvenida))
     print("*" * 40)
-    print("Este programa te pondrá a prueba, como si estuvieras dentro de la mismísima Matrix.")
-    print("Tú decides cuántas preguntas quieres enfrentar. Nada de IAs aquí, solo la cruda realidad.")
-    print("Para liberarte (aprobar), necesitarás al menos un 75% de aciertos. No hay atajos.")
+    print("This program will test you, as if you were inside the Matrix itself.")
+    print("You decide how many questions you want to face. No AIs here, just cold reality.")
+    print("To break free (pass), you'll need at least 75% correct. There are no shortcuts.")
     print()
 
 def solicitar_numero_preguntas(cuestionario):
     while True:
         try:
-            num_preguntas = int(input("¿Cuántas preguntas quieres responder? (Máximo " + str(len(cuestionario)) + "): "))
+            num_preguntas = int(input("How many questions do you want to answer? (Maximum " + str(len(cuestionario)) + "): "))
             if 1 <= num_preguntas <= len(cuestionario):
                 return num_preguntas
             else:
-                print(f"Por favor, introduce un número entre 1 y {len(cuestionario)}.")
+                print(f"Please enter a number between 1 and {len(cuestionario)}.")
                 print()
         except ValueError:
-            print("Eso no es un número válido. Inténtalo de nuevo.")
+            print("That's not a valid number. Try again.")
             print()
 
 
@@ -1070,9 +1087,9 @@ def realizar_test(cuestionario, num_preguntas):
         for opcion in pregunta["opciones"]:
             print(opcion)
 
-        respuesta_usuario = input("Tu respuesta (A, B, C, D): ").upper()
+        respuesta_usuario = input("Your answer (A, B, C, D): ").upper()
         while respuesta_usuario not in ["A", "B", "C", "D"]:
-            respuesta_usuario = input("En la Matrix no hay lugar para errores tipográficos. Elige A, B, C o D: ").upper()
+            respuesta_usuario = input("There's no room for typos in the Matrix. Choose A, B, C, or D: ").upper()
 
         # --- DEBUGGING ---
         #print(f"DEBUG: Respuesta usuario: {respuesta_usuario}, Respuesta correcta: {pregunta['respuesta']}, Son iguales?: {respuesta_usuario == pregunta['respuesta']}")
@@ -1084,20 +1101,19 @@ def realizar_test(cuestionario, num_preguntas):
 
 def mostrar_resultados(respuestas_usuario, total_preguntas):
     print("*" * 30)
-    print("       RESULTADOS FINALES")
+    print("       FINAL RESULTS")
     print("*" * 30)
 
     aciertos = 0
     fallos = []
 
     for pregunta, respuesta_usuario in respuestas_usuario:
-        # Comparamos directamente las letras:
-        if respuesta_usuario == pregunta["respuesta"]:  
+        if respuesta_usuario == pregunta["respuesta"]:
             aciertos += 1
         else:
             fallos.append(pregunta)
 
-    print(f"\nTu puntuación final es: {aciertos} / {total_preguntas}")
+    print(f"\nYour final score is: {aciertos} / {total_preguntas}")
 
     nota_minima = total_preguntas * 0.75
     if aciertos >= nota_minima:
@@ -1106,19 +1122,20 @@ def mostrar_resultados(respuestas_usuario, total_preguntas):
         print("\n" + random.choice(frases_suspenso))
 
     if fallos:
-       print("\n--- Errores cometidos ---")
+       print("\n--- Mistakes Made ---")
        for pregunta in fallos:
-           print(f"\nPregunta: {pregunta['pregunta']}")
-           print(f"Explicación: {pregunta['explicacion']}")
+           print(f"\nQuestion: {pregunta['pregunta']}")
+           print(f"Explanation: {pregunta['explicacion']}")
+
 
 
 # --- Programa Principal ---
 presentacion()
 num_preguntas = solicitar_numero_preguntas(cuestionario)
-empezar = input(f"{random.choice(frases_empezar)} (S/N): ").upper()
+empezar = input(f"{random.choice(frases_empezar)} (Y/N): ").upper()
 
 
-if empezar == "S":
+if empezar == "Y":
     respuestas_finales = realizar_test(cuestionario, num_preguntas)
     mostrar_resultados(respuestas_finales, num_preguntas)
     print("\n" + random.choice(frases_despedida))
