@@ -22,21 +22,6 @@ Este programa Python crea un simulador de examen interactivo con una interfaz de
 *   Python 3.x (compatible con cualquier versión de Python 3).
 *   No se requieren bibliotecas externas (solo se usan `random` y `os`, que son parte de la biblioteca estándar de Python).
 
-## Instalación
-
-1.  **Clonar el repositorio (o descargar el código):**
-
-    ```bash
-    git clone <URL del repositorio>  # Si usas Git
-    # O descarga el archivo .zip y descomprímelo
-    ```
-
-2.  **Navegar al directorio del proyecto:**
-
-    ```bash
-    cd <nombre del directorio>
-    ```
-
 ## Uso
 
 1.  **Ejecutar el script:**
